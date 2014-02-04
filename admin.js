@@ -82,7 +82,7 @@ wss.on('open', function (ws) {
 
             data.toString().split('\n').forEach(function(v){
                 parts = v.split(' ');
-                tmpLog.push({type: parts.shift(), data: parts.join(' ')});
+                tmpLog.push({time: parts.shift(), type: parts.shift(), data: parts.join(' ')});
             });
 
             broadcast({event:'InitLog', data:tmpLog});
@@ -103,7 +103,7 @@ var broadcast = function (event) {
             ws.send(event_json);
         }, 0);
     });
-}
+};
 
 var fs = require('fs');
 var log_file = fs.createWriteStream(__dirname + '/log.log');
@@ -140,7 +140,8 @@ exports.log = function () {
 
     console.log (text);
     log_file.write(text+'\n');
-}
+    broadcast({event:'log', data: {time: arg.shift(), type: arg.shift(), data: arg.join(' ')}});
+};
 
 exports.log('[Control]', 'Admin system initialized');
 exports.log('[Control]', 'Your password is', exports.password);

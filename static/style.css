@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  font-family: Ubuntu;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.block-full {
+  width: 100%;
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.h-menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  font-family: "Ubuntu Mono";
+}
+.h-menu .item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  text-align: center;
+  background: #3c3c3c;
+  color: tomato;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #3c3c3c;
+  border-top: 2px solid #3c3c3c;
+}
+.h-menu .item:hover,
+.h-menu .item.selected {
+  border-bottom: 2px solid tomato;
+}
+.h-menu:hover .item.selected:not(:hover) {
+  border-bottom: 2px solid #3c3c3c;
+}
+.header {
+  height: 300px;
+  background: url('/img/bg.png'), #000000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.header .title {
+  color: tomato;
+  font-size: 64px;
+}
+.micro {
+  color: white;
+  font-family: "Ubuntu Mono";
+  font-size: 14px;
+}
+.main {
+  min-height: calc(100% - 342px);
+}
+.main.log {
+  padding: 10px;
+  box-sizing: border-box;
+  background: #1c1c1c;
+  color: #F1F1F1;
+  font-family: Ubuntu Mono, Consolas;
+  font-size: 14px;
+}
+.main.log .log-type {
+  color: #59D0FF;
+}
+.main.log .log-error {
+  color: tomato;
+}
+.main.log .log-value {
+  color: #A5C25C;
+}

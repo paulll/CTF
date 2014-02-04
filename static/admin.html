@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Just a template, no functional here -->
+    <title>Admin UI</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script src="/js/connection.js" defer></script>
+    <script src="/js/ui.js" defer></script>
+    <script src="/js/admin.js" defer></script>
+</head>
+<body>
+    <div class="block-full header">
+        <div class="title">Admin UI <span class="micro">{ver 1.0a}</span></div>
+    </div>
+    <div class="block-full h-menu">
+        <div class="item">teams</div>
+        <div class="item selected">logs</div>
+        <div class="item">traffic</div>
+        <div class="item">news</div>
+    </div>
+    <div class="block-full main log" id="content">
+        <div><span class="log-type">[Control]</span> Starting CTF admin system v1.0</div>
+        <div><span class="log-type">[Control]</span> Your password: <span class="log-value">AWES0ME</span></div>
+        <div><span class="log-type">[HTTP]</span>  GET <span class="log-value">/admin/AWES0ME</span> from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[HTTP]</span>  GET <span class="log-value">/favicon.ico</span> from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[HTTP]</span>  GET <span class="log-value">/css/style.css</span> from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[HTTP]</span>  GET <span class="log-value">/js/connection.js</span> from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[HTTP]</span>  GET <span class="log-value">/js/ui.js</span> from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[HTTP]</span> GET <span class="log-value">/js/admin.js</span> from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[WebSocket]</span> connection from <span class="log-value">127.0.0.1</span></div>
+        <div><span class="log-type">[Control]</span> HTTP Logging disabled by admin</div>
+        <div><span class="log-type">[Control]</span> CTF deferred start requested by admin</div>
+        <div><span class="log-type">[DB]</span> Connected to MongoDB at <span class="log-value">:27017</span></div>
+        <div><span class="log-type">[DB]</span> <span class="log-error">[Error]</span> Connection timed out</div>
+        <div><span class="log-type">[DB]</span> Reconnecting..</div>
+        <div><span class="log-type">[DB]</span> <span class="log-error">[Error]</span> Failed to connect [127.0.0.1:27017]</div>
+        <div><span class="log-type">[DB]</span> Reconnecting..</div>
+        <div><span class="log-type">[DB]</span> <span class="log-error">[Error]</span> Failed to connect [127.0.0.1:27017]</div>
+        <div><span class="log-type">[DB]</span> Reconnecting..</div>
+        <div><span class="log-type">[DB]</span> <span class="log-error">[Error]</span> Failed to connect [127.0.0.1:27017]</div>
+        <div><span class="log-type">[DB]</span> Reconnecting..</div>
+        <div><span class="log-type">[DB]</span> <span class="log-error">[Error]</span> Failed to connect [127.0.0.1:27017]</div>
+        <div><span class="log-type">[DB]</span> Reconnecting..</div>
+        <div><span class="log-type">[DB]</span> Connected to MongoDB at <span class="log-value">:27017</span></div>
+        <div><span class="log-type">[Control]</span> CTF deferred start canceled by admin</div>
+        <div></div>
+    </div>
+</body>
+</html>

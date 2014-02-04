@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404</title>
+    <style>
+        html, body {
+            background: #1c1c1c;
+            color: white;
+            font-family: Ubuntu Mono, Monaco, Consolas, monospace;
+        }
+        h1 {
+            position: fixed;
+            top: 128px;
+            left:0;
+            right:0;
+            text-align: center;
+            height: 32px;
+            font-family: Ubuntu, Helvetica, sans-serif;
+            font-size: 64px;
+            color: tomato;
+        }
+        footer {
+            font-size: 16px;
+            position: fixed;
+            bottom: 0;
+            left:0;
+            right:0;
+            height:16px;
+            padding: 10px;
+        }
+        footer:hover {
+            cursor: pointer;
+        }
+        .cursor {
+            background: lime;
+            color:lime;
+            animation: blinker steps(1) 1s infinite;
+            -moz-animation: blinker steps(1) 1s infinite;
+            -webkit-animation: blinker steps(1) 1s infinite;
+        }
+        @keyframes blinker {
+            0% { visibility: visible; }
+            50% { visibility: hidden; }
+            100% { visibility: visible; }
+        }
+        @-webkit-keyframes blinker {
+            0% { visibility: visible; }
+            50% { visibility: hidden; }
+            100% { visibility: visible; }
+        }
+        @-moz-keyframes blinker {
+            0% { visibility: visible; }
+            50% { visibility: hidden; }
+            100% { visibility: visible; }
+        }
+    </style>
+</head>
+<body>
+<h1>{ Error 404 }</h1>
+<footer onclick="document.location = '/';">
+    <span style="color: lime">user@linux:/#</span> lynx http://10.0.0.1/ <span class="cursor">#</span></footer>
+</body>
+</html>

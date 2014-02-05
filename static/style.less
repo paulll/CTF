@@ -73,9 +73,11 @@ html, body {
 }
 .main {
   min-height: calc(~"100% - 342px"); // menu:42px;header:300px;
+  background: url('http://subtlepatterns.com/patterns/squared_metal.png');
+  box-sizing: border-box;
+  padding: 20px;
   &.log {
     padding: 10px;
-    box-sizing: border-box;
     background: #1c1c1c;
     color: #F1F1F1;
     font-family: Ubuntu Mono, Consolas;
@@ -88,6 +90,34 @@ html, body {
     }
     .log-value {
       color: #A5C25C;
+    }
+  }
+}
+.tasklist {
+  width: 1024px;
+  margin: 0 auto;
+
+  .task {
+    width: 220px;
+    margin: 5px;
+    padding: 10px;
+    background: #1c1c1c;
+    color: white;
+    border: solid 2px black;
+    height: 70px;
+    display: inline-block;
+    box-sizing: border-box;
+
+    -webkit-transition: border ease 500ms;
+    -moz-transition: border ease 500ms;
+    -o-transition: border ease 500ms;
+    transition: border ease 500ms;
+
+    &:hover {
+      border: solid tomato 2px;
+      -webkit-box-shadow: 0px 0px 5px 0px tomato;
+      -moz-box-shadow: 0px 0px 5px 0px tomato;
+      box-shadow: 0px 0px 5px 0px tomato;
     }
   }
 }

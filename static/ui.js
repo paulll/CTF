@@ -4,6 +4,8 @@ function TaskList(tasks) {
     this.element = document.createElement('div');
     this.element.className = 'tasklist';
 
+    var self = this;
+
     tasks.forEach(function (task) {
         var root = document.createElement('div');
         var name = document.createElement('div');
@@ -19,7 +21,7 @@ function TaskList(tasks) {
         root.appendChild(name);
         root.appendChild(tags);
 
-        this.element.appendChild(root);
+        self.element.appendChild(root);
     });
 }
 

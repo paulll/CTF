@@ -29,7 +29,7 @@ var cache = {};
 var files = [
     {
         original: 'admin.html',
-        dist: '/admin/'+admin.password,
+        dist: '/admin/' + admin.password,
         type: 'text/html'
     },
     {
@@ -74,7 +74,7 @@ var files = [
     }
 ];
 
-function loadCache (datas) {
+function loadCache(datas) {
     datas.forEach(function(data){
         fs.readFile(__dirname + "/static/" + data.original, function (error, datan) {
             cache[data.dist] = {
@@ -85,7 +85,7 @@ function loadCache (datas) {
     });
 }
 
-setInterval(function(){loadCache(files)}, 5000);
+setInterval(function () {loadCache(files); }, 5000);
 
 loadCache(files);
 

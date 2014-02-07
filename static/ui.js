@@ -40,9 +40,9 @@ function ScoreBoard(teams) {
 
             var team;
 
-            for (var teamn in teams) {
-                if (teams[teamn].name === teamname) {
-                    team = teams[teamn];
+            for (var teamnum in teams) {
+                if (teams[teamnum].name === teamname) {
+                    team = teams[teamnum];
                 }
             }
 
@@ -62,7 +62,7 @@ function ScoreBoard(teams) {
 
             row.onclick = function () {
                 go('team/'+team.name);
-            }
+            };
 
             root.appendChild(row);
         });
@@ -117,11 +117,18 @@ function FlagInput(task, callback){
     this.element = document.createElement('div');
     this.element.setAttribute('contenteditable', 'true');
     this.element.className = 'flaginput';
+
+    var self = this;
+
     this.element.onkeydown = function(event) {
         if (event.keyCode == 20) {
-            callback(this.element.innerText);
+            callback(self.element.innerText);
         }
     }
+}
+
+function GraphView(list) {
+
 }
 
 /*
